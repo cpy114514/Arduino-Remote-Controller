@@ -14,7 +14,8 @@ while True:
     if ser.in_waiting:
         # Read a line from the serial port, decode it to string, and clean up any extra characters
         line = ser.readline().decode('utf-8', errors='ignore').strip()
-
-        if line == "Received IR code: xxxxxx":
-            #use your own code in xxxxxx,get it in arduino ide with the code
-            pyautogui.#hotkey() or you can use press() or make your own one
+        print(line)
+        if line == "Received IR code: x":
+            #use your own code in x,get it in arduino ide with the code
+            pyautogui.hotkey('alt','f4')
+            #or you can use press(),write(), or make your own one
